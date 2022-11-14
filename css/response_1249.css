@@ -1,0 +1,448 @@
+@media print,
+(max-width: 1249px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 220px;
+    }
+
+
+    html.custom_scroll ::-webkit-scrollbar
+    {
+        width: 5px;
+        height: 5px;
+    }
+
+
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+    .content_flex .content
+    {
+        width: calc(100% - var(--sidebar_width) - 30px);
+    }
+
+
+
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 32px;
+    }
+
+
+
+    /*----------------
+        Banner top
+    ----------------*/
+    .banner_top .close_btn
+    {
+        right: 24px;
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header .logo
+    {
+        left: 24px;
+    }
+
+
+    header .search .mini_modal,
+    header .search .mini_modal.active
+    {
+        width: 375px;
+    }
+
+
+    header .catalog .mini_modal,
+    header .catalog .mini_modal.active
+    {
+        left: -172px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        padding-top: 34px;
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .main_slider .image
+    {
+        right: 50%;
+
+        margin-right: -612px;
+    }
+
+
+    .main_slider .controls
+    {
+        right: 24px;
+
+        margin-right: 0;
+    }
+
+
+
+    /*----------------
+        Categories
+    ----------------*/
+    .categories .category .name
+    {
+        white-space: normal;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info
+    {
+        margin-bottom: 80px;
+    }
+
+
+    .about_info .data
+    {
+        width: calc(100% - 490px);
+    }
+
+
+    .about_info .slider
+    {
+        width: 440px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .requisites .col
+    {
+        width: 224px;
+    }
+
+    .contacts_info .requisites .col.big
+    {
+        width: calc(100% - 264px);
+    }
+
+
+
+    /*-------------------
+        Services info
+    -------------------*/
+    .services_info .row
+    {
+        margin-left: -24px;
+    }
+
+    .services_info .row > *
+    {
+        width: calc(33.333% - 24px);
+        margin-left: 24px;
+    }
+
+
+    .services_info .service .thumb img:not(.icon)
+    {
+        opacity: .5;
+    }
+
+    .services_info .service .thumb .icon
+    {
+        opacity: 1;
+    }
+
+
+
+    /*------------------
+        Service info
+    ------------------*/
+    .service_info .data
+    {
+        width: calc(100% - 350px);
+    }
+
+
+    .service_info .col_right
+    {
+        width: 300px;
+    }
+
+
+
+    /*----------------
+        Stock info
+    ----------------*/
+    .stock_info .data
+    {
+        width: calc(100% - 350px);
+    }
+
+
+    .stock_info .col_right
+    {
+        width: 300px;
+    }
+
+
+
+    /*----------------
+        Error info
+    ----------------*/
+    .error_info .code
+    {
+        right: 24px;
+    }
+
+
+
+    /*-------------------------
+        Credit requirements
+    -------------------------*/
+    .credit_requirements .row > *.size1,
+    .credit_requirements .row > *.size2,
+    .credit_requirements .row > *.size3,
+    .credit_requirements .row > *.size4
+    {
+        width: calc(25% - 20px);
+    }
+
+
+
+    /*------------------
+        Payment info
+    ------------------*/
+    .payment_info .row > *.size1,
+    .payment_info .row > *.size2,
+    .payment_info .row > *.size3
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+    .payment_info .item .desc br
+    {
+        display: none;
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .data
+    {
+        width: calc(100% - 380px);
+    }
+
+
+    .checkout_info .col_right
+    {
+        width: 330px;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .product .back_btn
+    {
+        width: 160px;
+    }
+
+
+    .products .product .features > *
+    {
+        flex-wrap: wrap;
+    }
+
+    .products .product .features .val
+    {
+        margin-left: 0;
+    }
+
+    .products .product .features .color
+    {
+        margin-top: 3px;
+    }
+
+
+    .products .product .buy_btn,
+    .products .product .on_request,
+    .products .product .out_of_prod
+    {
+        font-size: 14px;
+    }
+
+    .products .product .buy_btn .icon,
+    .products .product .on_request .icon,
+    .products .product .out_of_prod .icon
+    {
+        margin-right: 10px;
+    }
+
+    .products .product .on_request span,
+    .products .product .out_of_prod span
+    {
+        font-size: 10px;
+    }
+
+
+    .products .product .btns > * + *
+    {
+        margin-left: 12px;
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .data
+    {
+        width: calc(100% - 320px);
+    }
+
+
+    .cart_info .list .product .info
+    {
+        width: calc(100% - 380px);
+    }
+
+
+    .cart_info .list .product .buy
+    {
+        width: 240px;
+    }
+
+
+    .cart_info .cart_total
+    {
+        width: 270px;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .images
+    {
+        width: calc(100% - 350px);
+    }
+
+
+    .product_info .images .big
+    {
+        max-width: calc(100% - 150px);
+        margin-left: 50px;
+    }
+
+
+
+    /*------------------
+        Product kits
+    ------------------*/
+    .product_kits .col_left
+    {
+        width: calc(100% - 339px);
+    }
+
+
+    .product_kits .product.big
+    {
+        width: 232px;
+    }
+
+
+    .product_kits .list
+    {
+        width: calc(100% - 262px);
+    }
+
+
+    .product_kits .data
+    {
+        width: 309px;
+        padding: 30px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer
+    {
+        padding: 80px 0;
+    }
+
+
+    footer .cont + .cont::before
+    {
+        width: calc(100% - 48px);
+    }
+
+
+    footer .col
+    {
+        width: 220px;
+    }
+
+
+    footer .menu
+    {
+        width: auto;
+        margin-left: auto;
+    }
+
+
+
+    footer .links
+    {
+        width: 220px;
+    }
+
+
+    footer .text
+    {
+        width: calc(100% - 250px);
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+}

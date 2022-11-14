@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<!-- Адаптирование страницы для мобильных устройств -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Запрет распознования номера телефона -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Заголовок страницы -->
+		<title>Заголовок страницы</title>
+
+		<!-- Данное значение часто используют(использовали) поисковые системы -->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<!-- Изменение цвета панели моб. браузера -->
+		<meta name="msapplication-TileColor" content="#000">
+		<meta name="theme-color" content="#000">
+
+		<!-- Подключение файлов стилей -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
+		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
+		<link rel="stylesheet" href="css/nouislider.css" async>
+		<link rel="stylesheet" href="css/styles.css" async>
+
+		<link rel="stylesheet" href="css/response_1249.css" media="print, (max-width: 1249px)" async>
+		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
+		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<header>
+					<div class="banner_top">
+						<div class="cont">
+							<div class="shops">
+								<a href="/">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_location"></use></svg>
+									<span>МАГАЗИНЫ ОТКРЫТЫ ПО НОВОМУ АДРЕСУ</span>
+								</a>
+							</div>
+
+							<button class="close_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="info">
+						<div class="cont row">
+							<a href="/" class="logo">
+								<img src="images/logo_white.svg" alt="">
+							</a>
+
+							<div class="links">
+								<div><a href="/">Акции</a></div>
+								<div class="sep"></div>
+								<div><a href="/">Контакты</a></div>
+							</div>
+
+							<button class="location modal_btn" data-modal="cities_modal">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_location2"></use></svg>
+								<span>Санкт-Петербург</span>
+							</button>
+
+							<div class="phone">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
+								<a href="tel:88005508414">8 (800) 550-84-14</a>
+							</div>
+
+							<a href="tel:88005508414" class="mob_phone">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
+							</a>
+
+							<button class="mob_menu_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="bottom">
+						<div class="cont row">
+							<div class="catalog modal_cont">
+								<a href="/" class="btn mini_modal_btn on_hover" data-modal-id="catalog_modal">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_menu"></use></svg>
+									<span>Каталог</span>
+								</a>
+
+								<div class="mini_modal" id="catalog_modal">
+									<div class="row">
+										<div class="categories">
+											<div><a href="/" class="active">Цифровые пианино</a></div>
+											<div><a href="/">Синтезаторы</a></div>
+											<div><a href="/">Акустические пианино</a></div>
+											<div><a href="/">Аксессуары</a></div>
+										</div>
+
+
+										<div class="sub sub1" style="display: block;">
+											<div><a href="/">ALESIS</a></div>
+											<div><a href="/">KURZWEIL</a></div>
+											<div><a href="/">Artesia</a></div>
+											<div><a href="/">ROCKDALE</a></div>
+											<div><a href="/">Becker</a></div>
+											<div><a href="/">ROLAND</a></div>
+											<div><a href="/">CASIO</a></div>
+											<div><a href="/">Ringway</a></div>
+											<div><a href="/">JONSON&CO</a></div>
+											<div><a href="/">StudioLogic</a></div>
+											<div><a href="/">KAWAI</a></div>
+											<div><a href="/">YAMAHA</a></div>
+											<div><a href="/">KORG</a></div>
+										</div>
+
+										<div class="sub sub2">
+											<div><a href="/">ALESIS</a></div>
+											<div><a href="/">KURZWEIL</a></div>
+											<div><a href="/">Artesia</a></div>
+											<div><a href="/">ROCKDALE</a></div>
+											<div><a href="/">Becker</a></div>
+											<div><a href="/">ROLAND</a></div>
+											<div><a href="/">CASIO</a></div>
+											<div><a href="/">Ringway</a></div>
+											<div><a href="/">JONSON&CO</a></div>
+											<div><a href="/">StudioLogic</a></div>
+											<div><a href="/">KAWAI</a></div>
+											<div><a href="/">YAMAHA</a></div>
+											<div><a href="/">KORG</a></div>
+										</div>
+
+										<div class="sub sub3">
+											<div><a href="/">ALESIS</a></div>
+											<div><a href="/">KURZWEIL</a></div>
+											<div><a href="/">Artesia</a></div>
+											<div><a href="/">ROCKDALE</a></div>
+											<div><a href="/">Becker</a></div>
+											<div><a href="/">ROLAND</a></div>
+											<div><a href="/">CASIO</a></div>
+											<div><a href="/">Ringway</a></div>
+											<div><a href="/">JONSON&CO</a></div>
+											<div><a href="/">StudioLogic</a></div>
+											<div><a href="/">KAWAI</a></div>
+											<div><a href="/">YAMAHA</a></div>
+											<div><a href="/">KORG</a></div>
+										</div>
+
+										<div class="sub sub4">
+											<div><a href="/">ALESIS</a></div>
+											<div><a href="/">KURZWEIL</a></div>
+											<div><a href="/">Artesia</a></div>
+											<div><a href="/">ROCKDALE</a></div>
+											<div><a href="/">Becker</a></div>
+											<div><a href="/">ROLAND</a></div>
+											<div><a href="/">CASIO</a></div>
+											<div><a href="/">Ringway</a></div>
+											<div><a href="/">JONSON&CO</a></div>
+											<div><a href="/">StudioLogic</a></div>
+											<div><a href="/">KAWAI</a></div>
+											<div><a href="/">YAMAHA</a></div>
+											<div><a href="/">KORG</a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<nav class="menu row">
+								<div class="menu_item">
+									<a class="active">Доставка</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Оплата</a>
+								</div>
+
+								<div class="menu_item">
+									<a href="/">Услуги</a>
+								</div>
+
+								<div class="menu_item hide">
+									<a href="/">Акции</a>
+								</div>
+
+								<div class="menu_item hide">
+									<a href="/">Контакты</a>
+								</div>
+							</nav>
+
+							<div class="search modal_cont">
+								<button class="btn mini_modal_btn" data-modal-id="search_modal">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_close_big"></use></svg>
+								</button>
+
+								<div class="mini_modal" id="search_modal">
+									<form action="">
+										<input type="text" name="" value="" class="input" placeholder="Поиск">
+
+										<button type="reset" class="reset_btn">Очистить</button>
+									</form>
+
+									<div class="tips">
+										<div class="title">Yamaha CVP</div>
+
+										<a href="/" class="product">
+											<div class="thumb">
+												<img data-src="images/tmp/product_thumb3.png" alt="" class="lazyload">
+											</div>
+
+											<div class="name">Yamaha CVP 809 GP чёрный полированный</div>
+										</a>
+
+										<a href="/" class="product">
+											<div class="thumb">
+												<img data-src="images/tmp/product_thumb3.png" alt="" class="lazyload">
+											</div>
+
+											<div class="name">Цифровой рояльYamaha CVP 809 GP</div>
+										</a>
+
+										<a href="/" class="product">
+											<div class="thumb">
+												<img data-src="images/tmp/product_thumb3.png" alt="" class="lazyload">
+											</div>
+
+											<div class="name">Yamaha CVP 809 GP</div>
+										</a>
+
+										<a href="/" class="product">
+											<div class="thumb">
+												<img data-src="images/tmp/product_thumb3.png" alt="" class="lazyload">
+											</div>
+
+											<div class="name">Yamaha CVP 809 GP чёрный полированный</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="icons_links">
+								<div><a href="/" class="compare">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_compare"></use></svg>
+									<span>4</span>
+								</a></div>
+
+								<div><a href="/" class="favorite">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
+									<span>12</span>
+								</a></div>
+
+								<div><a href="/" class="cart">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
+									<span>2</span>
+								</a></div>
+							</div>
+						</div>
+					</div>
+				</header>
+
+
+				<section class="mob_menu">
+					<button class="close_btn">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_close"></use></svg>
+					</button>
+
+					<div class="location">
+						<button class="btn modal_btn" data-modal="cities_modal">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_location2"></use></svg>
+							<span>Санкт-Петербург</span>
+						</button>
+					</div>
+
+					<div class="menu">
+						<div class="links">
+							<div><a href="/" class="catalog_link" data-sub="sub1">
+								<span>Каталог</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</a></div>
+
+							<div><a href="/">
+								<span>Доставка</span>
+							</a></div>
+
+							<div><a href="/">
+								<span>Оплата</span>
+							</a></div>
+
+							<div><a href="/">
+								<span>Услуги</span>
+							</a></div>
+						</div>
+
+						<div class="links bg">
+							<div><a href="/">
+								<span>Акции</span>
+							</a></div>
+
+							<div><a href="/">
+								<span>Контакты</span>
+							</a></div>
+						</div>
+
+						<div class="links step sub1">
+							<div class="back">
+								<button class="btn">Назад</button>
+							</div>
+
+							<div><a href="/">
+								<span>Весь каталог</span>
+							</a></div>
+
+							<div><a href="/" class="catalog_link" data-sub="sub1_1">
+								<span>Цифровые пианино</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</a></div>
+
+							<div><a href="/" class="catalog_link" data-sub="sub1_2">
+								<span>Синтезаторы</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</a></div>
+
+							<div><a href="/" class="catalog_link" data-sub="sub1_3">
+								<span>Акустические пианино</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</a></div>
+
+							<div><a href="/" class="catalog_link" data-sub="sub1_4">
+								<span>Аксессуары</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</a></div>
+						</div>
+
+						<div class="links step sub1_1">
+							<div class="back">
+								<button class="btn">Назад</button>
+							</div>
+
+							<div><a href="/">
+								<span>Посмотреть все</span>
+							</a></div>
+
+							<div><a href="/">ALESIS</a></div>
+							<div><a href="/">Artesia</a></div>
+							<div><a href="/">Becker</a></div>
+							<div><a href="/">CASIO</a></div>
+							<div><a href="/">JONSON&CO</a></div>
+							<div><a href="/">KAWAI</a></div>
+							<div><a href="/">KORG</a></div>
+							<div><a href="/">KURZWEIL</a></div>
+							<div><a href="/">ROCKDALE</a></div>
+							<div><a href="/">ROLAND</a></div>
+							<div><a href="/">Ringway</a></div>
+							<div><a href="/">StudioLogic</a></div>
+							<div><a href="/">YAMAHA</a></div>
+						</div>
+					</div>
+
+					<div class="contacts">
+						<div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
+							<a href="tel:88005508414">8 (800) 550-84-14</a>
+						</div>
+
+						<div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+							<a href="mailto:Hello@iamlp.ru">Hello@iamlp.ru</a>
+						</div>
+
+						<div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
+							<a href="/">whatsapp</a>
+						</div>
+
+						<div>
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
+							<a href="/">Вконтакте</a>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="page_head">
+					<div class="cont">
+						<div class="breadcrumbs">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor2"></use></svg>
+							<a href="/" class="mob_show">Главная</a><span class="sep"></span>
+							<span class="current">Доставка</span>
+						</div>
+
+						<h1 class="page_title">Доставка</h1>
+					</div>
+				</section>
+
+
+				<section class="delivery_info block">
+					<div class="cont">
+						<div class="text_block">
+							<h3>Москва/МО и Санкт-Петербург/ЛО</h3>
+
+							<h5>Наши курьеры</h5>
+
+							<ul>
+								<li>Доставка выполняется в согласованную предварительно с клиентом дату.</li>
+
+								<li>Для доставки существуют два опциональных временных периода: 12-17; 17-22. Изменение данных временных периодов в меньшую сторону возможно по просьбе клиента за дополнительную оплату.</li>
+
+								<li>Наши курьеры вовремя доставят ваш заказ, будут тактичны и вежливы, обладают большим опытом в осуществлении подъема и сборки инструментов любых габаритов.</li>
+							</ul>
+						</div>
+
+						<div class="methods">
+							<div class="item size1">
+								<div class="price">Бесплатно</div>
+
+								<div class="desc">В пределах Кад/Мкад при заказе от 10000 руб. Самовывоз</div>
+							</div>
+
+							<div class="item size2">
+								<div class="price">+ 50 руб./км</div>
+
+								<div class="desc">За пределы<br> Кад/Мкад</div>
+							</div>
+
+							<div class="item size3">
+								<div class="price">800 руб.</div>
+
+								<div class="desc">В пределах Кад/Мкад при заказе менее 10000 руб.</div>
+							</div>
+
+							<div class="item size4">
+								<div class="price">+ 800 руб</div>
+
+								<div class="desc">точное<br> время</div>
+							</div>
+						</div>
+
+						<div class="contacts">
+							<div class="data">
+								<div class="item">
+									<div class="label">Адрес</div>
+
+									<div class="val">Санкт-Петербург, ул. Миллионная, д.38</div>
+								</div>
+
+								<div class="item">
+									<div class="label">Время работы</div>
+
+									<div class="val">Пн-Вс 11.00 - 19.00 (по МСК)</div>
+								</div>
+
+								<div class="item">
+									<div class="label">По телефону</div>
+
+									<div class="val">
+										<div>
+											<a href="tel:88124099814">8 812 409-98-14</a>
+											<span>(бесплатно в Санкт-Петербурге)</span>
+										</div>
+
+										<div>
+											<a href="tel:84952781814">8 495 278-18-14</a>
+											<span>(бесплатно в Москве)</span>
+										</div>
+
+										<div>
+											<a href="tel:88005508414">8 800 550-84-14</a>
+											<span>(бесплатно по РФ)</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="map"></div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="delivery_section block">
+					<div class="cont row">
+						<div class="info">
+							<div class="block_head">
+								<div class="title small">Город с терминалом выдачи ТК</div>
+							</div>
+
+							<div class="text_block">
+								<h5>Доставка транспортной компанией</h5>
+
+								<p>Мы отправляем Ваш товар из Москвы или Санкт-Петербурга, пользуясь услугами перевозчика. Стоимость рассчитывается для каждого заказа индивидуально и зависит от габаритов товара, веса, дальности доставки и выбранных дополнительных услуг.</p>
+
+								<p>Товар приходит на терминал транспортной компании в Вашем городе. Вы можете получить товар как на терминале выдачи, так и заказать доставку до дома к вашему подъезду или с подъемом на этаж. Выбрать вариант доставки можно предварительно и сообщить менеджеру нашей копании при заказе, либо уже по прибытию груза на терминал в Вашем городе сообщить оператору транспортной компании. Все дополнительные услуги рассчитываются нам по прайсу перевозчика, поэтому разницы в цене для Вас не будет.</p>
+							</div>
+						</div>
+
+						<div class="notice">
+							<div class="data">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_notice3"></use></svg>
+
+								<div>
+									<div>Помните, что перевозчик — это сторонняя организация, оказывающая услугу нам и Вам, внимательно отнеситесь к приему товара на терминале или у себя дома.</div>
+
+									<div>Инструкция о приемке товара будет отправлена Вам нашими логистами вместе с трек данными Вашей отправки.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="delivery_section block">
+					<div class="cont row">
+						<div class="info">
+							<div class="block_head">
+								<div class="title small">Город без терминала выдачи ТК</div>
+							</div>
+
+							<div class="text_block">
+								<h5>Доставка транспортной компанией</h5>
+
+								<p>Мы отправляем Ваш товар из Москвы или Санкт-Петербурга, пользуясь услугами перевозчика. Стоимость рассчитывается для каждого заказа индивидуально и зависит от габаритов товара, веса, дальности доставки и выбранных дополнительных услуг.</p>
+
+								<p>Товар приходит на терминал транспортной компании в ближайший к Вам населенный пункт, затем передаётся курьеру транспортной компании и доставляется в ваш населенный пункт прямо на ваш домашний адрес. Оператор транспортной компании свяжется с Вами, когда товар приедет к ним на терминал и заранее согласует с Вами дату доставки.</p>
+							</div>
+						</div>
+
+						<div class="notice">
+							<div class="data">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_notice3"></use></svg>
+
+								<div>
+									<div>Помните, что перевозчик — это сторонняя организация, оказывающая услугу нам и Вам, внимательно отнеситесь к приему товара на терминале или у себя дома.</div>
+
+									<div>Инструкция о приемке товара будет отправлена Вам нашими логистами вместе с трек данными Вашей отправки.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="delivery_acceptance block">
+					<div class="cont">
+						<div class="block_head">
+							<div class="title small">Приемка товара</div>
+						</div>
+
+						<div class="text_block">
+							<p>Перед тем, как подписать документы выдачи товара на терминале транспортной компании или курьеру транспортной компании, пожалуйста, внимательно проверьте:</p>
+
+							<ul>
+								<li>Комплектность товара – все ли позиции согласно транспортной накладной вы видите. Небольшие товары могут упакованы в одну коробку, поэтому проверяйте количество позиции именно в накладной перевозчика.</li>
+
+								<li>Внешнее состояние коробок – мы отправляем товар в заводских новых упаковках. Если вы видите существенные повреждения упаковки – убедитесь на терминале транспортной компании, что сам товар не поврежден.</li>
+							</ul>
+
+							<p>Случаи повреждения товара очень редки, но, если вдруг это случилось, не переживайте. Вам нужно:</p>
+
+							<ol>
+								<li>Не подписывать документы о приемке товара;</li>
+								<li>Составить акт претензии по образцу транспортной компании;</li>
+								<li>Сообщить нам об инциденте.</li>
+							</ol>
+
+							<p>Далее к решению вопроса подключится наша команда, а вы получите на ваш выбор полную компенсацию стоимости или новый товар.</p>
+						</div>
+
+						<div class="notice">
+							<div class="data">
+								<svg class="icon small"><use xlink:href="images/sprite.svg#ic_notice3"></use></svg>
+
+								<div>Помните, если вы подпишите документы без осмотра, транспортная компания вправе не принимать дальнейшие претензии.</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+			<footer>
+				<div class="cont row">
+					<div class="col">
+						<div class="logo">
+							<img src="images/logo.svg" alt="">
+						</div>
+
+						<div class="contacts">
+							<div>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
+								<a href="tel:88005508414">8 (800) 550-84-14</a>
+							</div>
+
+							<div>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+								<a href="mailto:Hello@iamlp.ru">Hello@iamlp.ru</a>
+							</div>
+
+							<div>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
+								<a href="/">whatsapp</a>
+							</div>
+
+							<div>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
+								<a href="/">Вконтакте</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="menu">
+						<div class="title">Продукция</div>
+
+						<div class="items">
+							<div><a href="/">Каталог</a></div>
+							<div><a href="/">Цифровые пианино</a></div>
+							<div><a href="/">Синтезаторы</a></div>
+							<div><a href="/">Акустические<br> пианино</a></div>
+							<div><a href="/">Аксессуары</a></div>
+						</div>
+					</div>
+
+					<div class="menu">
+						<div class="title">Как мы работаем</div>
+
+						<div class="items">
+							<div><a href="/">Доставка</a></div>
+							<div><a href="/">Оплата</a></div>
+							<div><a href="/">Гарантии</a></div>
+							<div><a href="/">Правила возврата<br> и замены</a></div>
+						</div>
+					</div>
+
+					<div class="menu">
+						<div class="title">Прочее</div>
+
+						<div class="items">
+							<div><a href="/">Акции</a></div>
+							<div><a href="/">Услуги</a></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont row">
+					<div class="links">
+						<div><a href="/">Политика конфиценциальности</a></div>
+						<div><a href="/">Реквизиты</a></div>
+					</div>
+
+					<div class="text">Любое использование материалов с сайта запрещено без письменного разрешения администрации сайта. Указанные на сайте цены не являются публичной офертой могут быть изменены в любое время. &copy; ООО «Лав-Пиано» 2022 - бесконечность. Все права защищены.</div>
+				</div>
+			</footer>
+
+
+			<div class="overlay"></div>
+		</div>
+
+
+		<div class="supports_error">
+			Ваш браузер устарел рекомендуем обновить его до последней версии<br> или использовать другой более современный.
+		</div>
+
+
+		<section class="modal middle_w" id="cities_modal">
+			<div class="modal_title">Выбор города</div>
+
+			<div class="search">
+				<form action="">
+					<input type="text" name="" value="" class="input" placeholder="Начните вводить город...">
+
+					<button type="submit" class="submit_btn">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+					</button>
+				</form>
+			</div>
+
+			<div class="popular">
+				<div class="row">
+					<div><button class="btn">Москва</button></div>
+					<div><button class="btn">Санкт-Петербург</button></div>
+					<div><button class="btn">Новосибирск</button></div>
+					<div><button class="btn">Екатеринбург</button></div>
+					<div><button class="btn">Нижний Новгород</button></div>
+				</div>
+			</div>
+
+			<div class="result">
+				<div class="scroll">
+					<div class="row">
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Санкт-Петербург</button></div>
+						<div><button class="btn">Новосибирск</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Екатеринбург</button></div>
+						<div><button class="btn">Нижний Новгород</button></div>
+						<div><button class="btn">Екатеринбург</button></div>
+						<div><button class="btn">Нижний Новгород</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Санкт-Петербург</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Новосибирск</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Санкт-Петербург</button></div>
+						<div><button class="btn">Новосибирск</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Екатеринбург</button></div>
+						<div><button class="btn">Нижний Новгород</button></div>
+						<div><button class="btn">Екатеринбург</button></div>
+						<div><button class="btn">Нижний Новгород</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Санкт-Петербург</button></div>
+						<div><button class="btn">Москва</button></div>
+						<div><button class="btn">Новосибирск</button></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="result">
+				<div class="empty">Ничего не найдено</div>
+			</div>
+		</section>
+
+
+		<!-- Подключение javascript файлов -->
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.min.js"></script>
+		<script src="js/hc-sticky.js"></script>
+		<script src="js/nouislider.min.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/scripts.js"></script>
+
+		<!-- Яндекс карты -->
+		<script src="http://api-maps.yandex.ru/2.1.75/?load=package.standard,package.geoObjects&lang=ru-RU"></script>
+		<script>
+			ymaps.ready(() => {
+				let myMap = new ymaps.Map('map', {
+					center: [59.940623, 30.317305],
+					zoom: 16,
+					controls: []
+				})
+
+				// Кастомный маркер
+				let myPlacemark = new ymaps.Placemark([59.940623, 30.317305], {}, {
+					iconLayout : 'default#image',
+					iconImageHref : 'images/ic_map_marker.svg',
+					iconImageSize : [60, 60],
+					iconImageOffset : [-30, -30]
+				})
+
+				myMap.geoObjects.add(myPlacemark)
+
+				myMap.controls.add('zoomControl', {
+					position : {
+						left : '20px',
+						top   : '20px'
+					}
+				})
+
+				myMap.behaviors.disable('scrollZoom')
+			})
+		</script>
+	</body>
+</html>
