@@ -45,6 +45,16 @@
 
 
 
+    /*---------------
+        Load more
+    ---------------*/
+    .load_more
+    {
+        margin-top: 40px;
+    }
+
+
+
     /*------------
         Header
     ------------*/
@@ -1454,6 +1464,24 @@
     /*--------------
         Products
     --------------*/
+    .products .empty .title
+    {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .products .empty .title br
+    {
+        display: none;
+    }
+
+
+    .products .empty .reset_btn
+    {
+        width: 100%;
+    }
+
+
     .products .row
     {
         margin-bottom: -40px;
@@ -1717,6 +1745,13 @@
         bottom: 67px;
     }
 
+    .product_info .product_name + .btns
+    {
+        position: relative;
+        top: -1px;
+        bottom: 0;
+    }
+
 
     .product_info .anchors
     {
@@ -1813,9 +1848,17 @@
         padding-top: 40px;
     }
 
-
     .product_info .data > *
     {
+        width: 100%;
+        min-height: 0;
+    }
+
+
+    .product_info .links.mob_absolute
+    {
+        position: relative;
+
         width: 100%;
     }
 
@@ -1860,6 +1903,106 @@
     .product_features .section .title
     {
         font-size: 21px;
+    }
+
+
+
+    /*--------------
+        About us
+    --------------*/
+    .about_us .row > *
+    {
+        width: calc(50% - 12px);
+    }
+
+
+
+    /*---------------
+        Favorites
+    ---------------*/
+    .favorites .list .product .thumb
+    {
+        width: 100px;
+        height: 100px;
+        padding: 12px;
+    }
+
+
+    .favorites .list .product .info
+    {
+        width: calc(100% - 120px);
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+
+    .favorites .list .product .features
+    {
+        width: 100%;
+        margin-top: 4px;
+
+        order: 2;
+    }
+
+
+    .favorites .list .product .status
+    {
+        width: 100%;
+        margin-top: 4px;
+        margin-left: 0;
+    }
+
+
+    .favorites .list .product .buy
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .favorites .list .product .price
+    {
+        margin-right: auto;
+        margin-left: 20px;
+
+        order: 2;
+    }
+
+    .favorites .list .product .buy_btn
+    {
+        margin-left: 0;
+
+        order: 1;
+    }
+
+
+
+    /*-------------
+        Cookies
+    -------------*/
+    .cookies
+    {
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+
+    /*--------------------
+        Compare filter
+    --------------------*/
+    .compare_filter
+    {
+        width: 100%;
+    }
+
+    .compare_filter > * + *
+    {
+        margin-left: 24px;
     }
 
 

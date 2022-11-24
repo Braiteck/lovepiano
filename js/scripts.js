@@ -68,6 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				clickable: true,
 				bulletActiveClass: 'active'
 			},
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
 			breakpoints: {
 				0: {
 					spaceBetween: 12,
@@ -100,6 +104,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		productsSliders.push(new Swiper('.products_s' + i, options))
 	})
+
+
+	// Карусель товаров - удаление товара
+	const productDelBtns = document.querySelectorAll('.products .product .del_btn')
+
+	if (productDelBtns) {
+		productDelBtns.forEach(el => {
+			el.addEventListener('click', e => {
+				e.preventDefault()
+
+				el.closest('.swiper-slide').remove()
+
+				productsSliders.forEach(slider => slider.updateSlides())
+				productsSliders.forEach(slider => slider.updateProgress())
+
+				// Сравнение товаров
+				comparePositions()
+			})
+		})
+	}
 
 
 	// О сайте
@@ -341,7 +365,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	// Фильтр
+	// Фильтр - раскрытие/сворачивание
 	const filterLabels = document.querySelectorAll('.filter .label')
 
 	if (filterLabels) {
@@ -362,6 +386,100 @@ document.addEventListener('DOMContentLoaded', function () {
 		filterSelectedBtns.forEach(el => {
 			el.addEventListener('click', e => {
 				el.closest('div').remove()
+			})
+		})
+	}
+
+
+	// Фильтр - выбор чего либо
+	const filterCheckboxes = document.querySelectorAll('.filter .checkbox')
+
+	if (filterCheckboxes) {
+		filterCheckboxes.forEach(el => {
+			el.addEventListener('click', e => {
+				showLoader()
+			})
+		})
+	}
+
+
+	// Фильтр - диапазон цены
+	const nonLinearSlider = document.getElementById('nonlinear')
+
+	if (nonLinearSlider) {
+		noUiSlider.create(nonLinearSlider, {
+			connect: true,
+			behaviour: 'tap',
+			start: [200000, 400000],
+			range: {
+				'min': [0],
+				'85%': [300000, 1000],
+				'max': [1000000]
+			}
+		})
+
+		let rangeNodes = [
+			document.getElementById('range_from'),
+			document.getElementById('range_to')
+		]
+
+		nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
+			if (handle == 0) {
+				rangeNodes[handle].value = 'от ' + parseInt(values[handle]).toLocaleString() + ' ₽'
+			}
+
+			if (handle == 1) {
+				rangeNodes[handle].value = 'до ' + parseInt(values[handle]).toLocaleString() + ' ₽'
+			}
+		})
+	}
+
+
+	// Фильтр - сброс
+	const filterResetBtn = document.querySelector('.products .empty .reset_btn'),
+		filterResetBtn2 = document.querySelector('.filter .reset_btn'),
+		filterForm = document.querySelector('.filter form')
+
+	if (filterResetBtn) {
+		filterResetBtn.addEventListener('click', e => {
+			e.preventDefault()
+
+			filterForm.reset()
+			nonLinearSlider.noUiSlider.reset()
+		})
+	}
+
+	if (filterResetBtn2) {
+		filterResetBtn2.addEventListener('click', e => {
+			e.preventDefault()
+
+			let parent = e.target.closest('.filter'),
+				inputs = parent.querySelectorAll('.checkbox input')
+
+			inputs.forEach(input => input.removeAttribute('checked'))
+
+			filterForm.reset()
+			nonLinearSlider.noUiSlider.reset()
+		})
+	}
+
+
+	// Фильтр - выбрать все/снять все
+	const filterToggleAllBtn = document.querySelectorAll('.filter .toggle_all_btn')
+
+	if (filterToggleAllBtn) {
+		filterToggleAllBtn.forEach(el => {
+			el.addEventListener('click', e => {
+				let parent = el.closest('.data'),
+					inputs = parent.querySelectorAll('.checkbox input')
+
+				el.classList.toggle('active')
+
+				el.classList.contains('active')
+					? inputs.forEach(input => input.setAttribute('checked', true))
+					: inputs.forEach(input => input.removeAttribute('checked'))
+
+				showLoader()
 			})
 		})
 	}
@@ -456,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		})
 	}
 
+
 	// Оформление заказа - Вреям доставки
 	const timeOptionBtns = document.querySelectorAll('.time .mini_modal > *'),
 		timeSelectBtns = document.querySelector('.time .select_btn'),
@@ -475,6 +594,24 @@ document.addEventListener('DOMContentLoaded', function () {
 				miniModalBtns.forEach(btn => btn.classList.remove('active'))
 
 				timeSelect.value = el.getAttribute('data-value')
+			})
+		})
+	}
+
+
+	// Оформление заказа - Выбор доп. услуги
+	const addServiceChecks = document.querySelectorAll('.checkout_info .add_services .checkbox')
+
+	if (addServiceChecks) {
+		addServiceChecks.forEach(el => {
+			el.addEventListener('click', e => {
+				if (e.target.classList.contains('checkbox')) {
+					let index = el.getAttribute('data-index')
+
+					let addService = document.querySelector('.order_info .add_service[data-index="' + index + '"]')
+
+					addService.classList.toggle('hide')
+				}
 			})
 		})
 	}
@@ -679,38 +816,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
-	// Фильтр
-	const nonLinearSlider = document.getElementById('nonlinear')
-
-	if (nonLinearSlider) {
-		noUiSlider.create(nonLinearSlider, {
-			connect: true,
-			behaviour: 'tap',
-			start: [200000, 400000],
-			range: {
-				'min': [0],
-				'85%': [300000, 1000],
-				'max': [1000000]
-			}
-		})
-
-		let rangeNodes = [
-			document.getElementById('range_from'),
-			document.getElementById('range_to')
-		]
-
-		nonLinearSlider.noUiSlider.on('update', function (values, handle, unencoded, isTap, positions) {
-			if (handle == 0) {
-				rangeNodes[handle].value = 'от ' + parseInt(values[handle]).toLocaleString() + ' ₽'
-			}
-
-			if (handle == 1) {
-				rangeNodes[handle].value = 'до ' + parseInt(values[handle]).toLocaleString() + ' ₽'
-			}
-		})
-	}
-
-
 	// Верхний баннер
 	const bannerCloseBtn = document.querySelector('.banner_top .close_btn')
 
@@ -734,6 +839,30 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Cookies
+	const cookies = document.querySelector('.cookies')
+
+	if (cookies) {
+		cookies.querySelector('.close_btn').addEventListener('click', e => {
+			e.preventDefault()
+
+			cookies.remove()
+		})
+	}
+
+
+	// Избранные товары
+	const favoritesDeleteBtns = document.querySelectorAll('.favorites .product .delete_btn')
+
+	if (favoritesDeleteBtns) {
+		favoritesDeleteBtns.forEach(el => {
+			el.addEventListener('click', e => {
+				el.closest('.product').remove()
+			})
+		})
+	}
 })
 
 
@@ -751,6 +880,10 @@ window.addEventListener('load', function () {
 
 		catalogHeight(el, parseInt(styles.getPropertyValue('--catalog_count')))
 	})
+
+
+	// Сравнение товаров
+	comparePositions()
 })
 
 
@@ -785,10 +918,15 @@ window.addEventListener('resize', function () {
 		})
 
 
+		// Сравнение товаров
+		comparePositions()
+
+
 		// Перезапись ширины окна
 		WW = window.innerWidth || document.clientWidth || document.getElementsByTagName('body')[0].clientWidth
 	}
 })
+
 
 
 // Выравнивание товаров
@@ -834,5 +972,73 @@ function catalogHeight(context, step) {
 		start = start + step
 		finish = finish + step
 		i++
+	})
+}
+
+
+// Loader
+function showLoader() {
+	const loader = document.querySelector('.loader')
+
+	if (loader) {
+		loader.classList.add('show')
+	}
+}
+
+function hideLoader() {
+	const loader = document.querySelector('.loader')
+
+	if (loader) {
+		loader.classList.remove('show')
+	}
+}
+
+
+// Compare positions
+function comparePositions() {
+	const compareFeaturesNames = document.querySelectorAll('.compare_info .features_names > *'),
+		productFeaturesItems = document.querySelectorAll('.compare_info .features .item'),
+		productFeatures = document.querySelectorAll('.compare_info .features'),
+		compareFeaturesNamesHeight = [],
+		featuresPosotions = []
+
+
+	// Reset
+	compareFeaturesNames.forEach(el => el.style.height = 'auto')
+	productFeaturesItems.forEach(el => el.style.height = 'auto')
+	document.querySelector('.compare_info .features_names').style.width = 'auto'
+
+
+	// Set features names width
+	document.querySelector('.compare_info .features_names').style.width = document.querySelector('.products .product').offsetWidth + 'px'
+
+
+	// Get features names height
+	compareFeaturesNames.forEach(el => {
+		compareFeaturesNamesHeight.push(el.offsetHeight)
+	})
+
+
+	// Set features height
+	productFeatures.forEach(el => {
+		el.querySelectorAll('.item').forEach((el, index) => {
+			el.setAttribute('nodeList', index)
+			el.style.paddingTop = compareFeaturesNamesHeight[index] + 8 + 'px'
+
+			setHeight(document.querySelectorAll('[nodeList="' + index + '"]'))
+		})
+	})
+
+
+	// Set features names position
+	compareFeaturesNames.forEach((el, index) => {
+		let features = document.querySelector('.products .features')
+
+		features.querySelectorAll('.item').forEach(el => {
+			featuresPosotions.push(el.offsetTop)
+		})
+
+		el.style.top = featuresPosotions[index] + 'px'
+		el.classList.add('show')
 	})
 }

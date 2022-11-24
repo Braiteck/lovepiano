@@ -400,6 +400,24 @@
 
 
 
+    /*--------------
+        About us
+    --------------*/
+    .about_us .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+    .about_us .row > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
