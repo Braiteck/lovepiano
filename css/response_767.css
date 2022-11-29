@@ -327,7 +327,7 @@
     }
 
 
-    .main_slider .slide .cont
+    /* .main_slider .slide .cont
     {
         min-height: 540px;
         padding-top: 50px;
@@ -363,14 +363,17 @@
         height: 176px;
         margin: auto;
         margin-right: 0;
+    } */
+
+
+    .main_slider .swiper-slide img.w1024
+    {
+        display: none;
     }
 
-
-    .main_slider .controls
+    .main_slider .swiper-slide img.w768
     {
-        right: auto;
-        bottom: 177px;
-        left: 24px;
+        display: block;
     }
 
 
@@ -2003,6 +2006,70 @@
     .compare_filter > * + *
     {
         margin-left: 24px;
+    }
+
+
+
+    /*------------------------
+        Additional service
+    ------------------------*/
+    .additional_service .product
+    {
+        min-height: 0;
+        padding-left: 0;
+    }
+
+    .additional_service .product + .product
+    {
+        min-height: 0;
+    }
+
+
+    .additional_service .product .thumb
+    {
+        position: relative;
+
+        width: 60px;
+        height: 60px;
+        padding: 6px;
+    }
+
+    .additional_service .product + .product .thumb
+    {
+        top: 0;
+    }
+
+
+    .additional_service .product .info
+    {
+        width: calc(100% - 80px);
+        margin-left: auto;
+    }
+
+
+    .additional_service .product .prices
+    {
+        display: block;
+
+        margin-top: 10px;
+    }
+
+    .additional_service .product .prices > *
+    {
+        width: 100%;
+    }
+
+    .additional_service .product .prices > * + *
+    {
+        margin-top: 4px;
+        margin-left: 0;
+    }
+
+
+    .additional_service .product > .exp,
+    .additional_service .product > .price
+    {
+        margin-left: 80px;
     }
 
 

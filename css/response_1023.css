@@ -150,7 +150,7 @@
     /*-----------------
         Main slider
     -----------------*/
-    .main_slider .slide .cont
+    /* .main_slider .slide .cont
     {
         min-height: 433px;
         padding-top: 61px;
@@ -168,12 +168,23 @@
     {
         width: 628px;
         margin-right: -651px;
+    } */
+
+
+    .main_slider .swiper-slide img.default
+    {
+        display: none;
+    }
+
+    .main_slider .swiper-slide img.w1024
+    {
+        display: block;
     }
 
 
     .main_slider .controls
     {
-        bottom: 80px;
+        bottom: 0;
     }
 
 
@@ -971,6 +982,66 @@
     .compare_filter label
     {
         font-size: 14px;
+    }
+
+
+
+    /*------------------------
+        Additional service
+    ------------------------*/
+    .additional_service .product
+    {
+        min-height: 110px;
+        padding-left: 140px;
+
+        flex-wrap: wrap;
+    }
+
+    .additional_service .product + .product
+    {
+        min-height: 140px;
+    }
+
+
+    .additional_service .product .thumb
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 110px;
+        height: 110px;
+        padding: 14px;
+    }
+
+    .additional_service .product + .product .thumb
+    {
+        top: 30px;
+    }
+
+
+    .additional_service .product .info
+    {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .additional_service .product .prices,
+    .additional_service .product > .exp,
+    .additional_service .product > .price
+    {
+        width: 100%;
+        min-width: 0;
+        margin-top: 8px;
+        margin-left: 0;
+
+        text-align: left;
+    }
+
+    .additional_service .product > .exp
+    {
+        font-size: 12px;
     }
 
 

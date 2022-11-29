@@ -863,6 +863,51 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Подъем/Сборка - Поиск
+	const additionalServiceSearch = document.querySelector('.additional_service .search'),
+		additionalServiceSearchForm = additionalServiceSearch.querySelector('form'),
+		additionalServiceSearchClearBtn = additionalServiceSearch.querySelector('.clear_btn'),
+		additionalServiceSearchTips = additionalServiceSearch.querySelector('.tips'),
+		additionalServiceSearchTip = additionalServiceSearch.querySelector('.tip')
+
+	if (additionalServiceSearch) {
+		// Ввод жанных в поле
+		additionalServiceSearch.querySelector('.input').addEventListener('keyup', e => {
+			setTimeout(() => {
+				e.target.value.length
+					? e.target.classList.add('active')
+					: e.target.classList.remove('active')
+
+				e.target.value.length
+					? additionalServiceSearchTips.classList.add('show')
+					: additionalServiceSearchTips.classList.remove('show')
+			})
+		})
+
+		// Очистка поля
+		additionalServiceSearchClearBtn.addEventListener('click', e => {
+			e.preventDefault()
+
+			additionalServiceSearch.querySelector('.input').value = ''
+			additionalServiceSearch.querySelector('.input').classList.remove('active')
+
+			additionalServiceSearchTips.classList.remove('show')
+		})
+
+		// Выбор подсказки
+		additionalServiceSearchTip.addEventListener('click', e => {
+			e.preventDefault()
+
+			additionalServiceSearchTips.classList.remove('show')
+		})
+
+		// Отправка формы
+		additionalServiceSearchForm.addEventListener('submit', e => {
+			e.preventDefault()
+		})
+	}
 })
 
 
@@ -883,7 +928,11 @@ window.addEventListener('load', function () {
 
 
 	// Сравнение товаров
-	comparePositions()
+	const compareInfo = document.querySelector('.compare_info')
+
+	if (compareInfo) {
+		comparePositions()
+	}
 })
 
 
@@ -919,7 +968,11 @@ window.addEventListener('resize', function () {
 
 
 		// Сравнение товаров
-		comparePositions()
+		const compareInfo = document.querySelector('.compare_info')
+
+		if (compareInfo) {
+			comparePositions()
+		}
 
 
 		// Перезапись ширины окна
